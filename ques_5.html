@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: seashell;
+            font-family: 'Baloo Tammudu 2', cursive;
+        }
+
+        #jan-21 {
+            display: none;
+        }
+
+        #feb-21 {
+            display: none;
+        }
+
+        #mar-21 {
+            display: none;
+        }
+
+        #apr-21 {
+            display: none;
+        }
+
+        #may-21 {
+            display: none;
+        }
+
+        #june-21 {
+            display: none;
+        }
+
+        #july-21 {
+            display: none;
+        }
+
+        #aug-21 {
+            display: none;
+        }
+
+        #sep-21 {
+            display: none;
+        }
+
+        #oct-21 {
+            display: none;
+        }
+
+        #nov-21 {
+            display: none;
+        }
+
+        #dec-21 {
+            display: none;
+        }
+
+        .calander_year {
+            text-align: center;
+            width: 300px;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+
+        .select_cal {
+            margin: 10px auto;
+            width: 125px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            text-decoration: underline;
+            color: lawngreen;
+            text-transform: uppercase;
+        }
+
+        label {
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-size: 34px;
+            font-weight: 600;
+        }
+
+        select#month {
+            /* text-align: center; */
+            display: block;
+            font-size: 22px;
+            color: black;
+            font-family: 'Baloo Tammudu 2', cursive;
+            margin-left: -22px;
+}
+
+        
+        .months{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calander_year">
+        <h3>Calender 2021</h3>
+        <label for="month">Choose Month</label>
+        <div class="select_cal">
+
+            <select name="month" id="month" onchange="getSelectedValue();">
+                <option value="Choose Month">Choose Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">march</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+
+            </select>
+
+        </div>
+        <!-- <button class="btn" onclick="January()">Choose the month</button> -->
+        <div class="months">
+
+
+            <div id="jan-21">
+                <strong>January</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="background-color: blue;">1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td class="red">3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td class="red">10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td class="red">17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td class="red">24</td>
+                        <td>25</td>
+                        <td style="background-color: blue;">26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td class="red">31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="feb-21">
+                <strong>February</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td class="red">7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td class="red">14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td class="red">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td class="red">28</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+            <div id="mar-21">
+                <strong>March</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td class="red">7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td class="red">14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td class="red">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td class="red">28</td>
+                        <td style="background-color: blue;">29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="apr-21" >
+                <strong>April</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td style="background-color: blue;">2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td class="red">4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="red">11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td class="red">18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td style="background-color: blue;">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td class="red">25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <div id="may-21">
+                <strong>May</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr>
+                        <td class="red">2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+
+                    </tr>
+                    <tr>
+                        <td class="red">9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td style="background-color: blue;">14</td>
+                        <td>15</td>
+
+                    </tr>
+                    <tr>
+                        <td class="red">16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+
+                    </tr>
+                    <tr>
+                        <td class="red">23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td style="background-color: blue;">26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+
+                    </tr>
+                    <tr>
+                        <td class="red">30</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div id="june-21">
+                <strong>June</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div id="july-21">
+                <strong>July</strong>
+                <strong>2021</strong>
+                <table border="1"  style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td class="red">4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="red">11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td class="red">18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td style="background-color: blue;">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td class="red">25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div id="aug-21">
+                <strong>August</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td class="red">1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red" >8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td style="background-color: blue;">19</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td class="red">22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td class="red">29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div id="sep-21">
+                <strong>September</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div id="oct-21">
+                <strong>October</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td style="background-color: blue;">2</td>
+                    </tr>
+                    <tr>
+                        <td class="red">3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td class="red">10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td style="background-color: blue;">15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td class="red">17</td>
+                        <td>18</td>
+                        <td style="background-color: blue;">19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td class="red">24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td class="red">31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="nov-21">
+                <strong>November</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td style="background-color: blue;">4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td class="red">7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td class="red">14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td style="background-color: blue;">19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td class="red">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td class="red">28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="dec-21">
+                <strong>December</strong>
+                <strong>2021</strong>
+                <table border="1" style="background-color: green;">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                    <tr>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red" >5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td style="background-color: blue;">25</td>
+                    </tr>
+                    <tr>
+
+                        <td class="red">26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- java script code -->
+
+    <script>
+        function getSelectedValue() {
+            var selected_value = document.getElementById("month").value;
+            // console.log(typeof (selected_value));
+            // console.log(selected_value);
+
+            if (selected_value === "January") {
+
+                document.getElementById("jan-21").style.display = "block";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "February") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "block";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "March") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "block";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "April") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "block";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "May") {
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "block";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "June") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "block";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "July") {
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "block";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "August") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "block";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "September") {
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "block";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+
+            }
+            else if (selected_value === "October") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "block";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else if (selected_value === "November") {
+
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "block";
+                document.getElementById("dec-21").style.display = "none";
+            }
+            else {
+                document.getElementById("jan-21").style.display = "none";
+                document.getElementById("feb-21").style.display = "none";
+                document.getElementById("mar-21").style.display = "none";
+                document.getElementById("apr-21").style.display = "none";
+                document.getElementById("may-21").style.display = "none";
+                document.getElementById("june-21").style.display = "none";
+                document.getElementById("july-21").style.display = "none";
+                document.getElementById("aug-21").style.display = "none";
+                document.getElementById("sep-21").style.display = "none";
+                document.getElementById("oct-21").style.display = "none";
+                document.getElementById("nov-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "none";
+                document.getElementById("dec-21").style.display = "block";
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>
